@@ -1,4 +1,4 @@
-package by.matusevich.task5;
+package by.matusevich.task05;
 
 public class NewMoneyLast {
     public static void main(String[] args) {

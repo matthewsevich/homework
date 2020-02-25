@@ -1,4 +1,4 @@
-package by.matusevich.task6;
+package by.matusevich.task06;
 
 public class Calendar {
     public static void main(String[] args) {

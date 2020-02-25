@@ -1,4 +1,4 @@
-package by.matusevich.task2;
+package by.matusevich.task02;
 
 public class WeekConverter {
 

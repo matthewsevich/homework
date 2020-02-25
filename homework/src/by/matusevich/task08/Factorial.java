@@ -1,4 +1,4 @@
-package by.matusevich.task8;
+package by.matusevich.task08;
 
 class Factorial {
     public static void main(String[] args) {

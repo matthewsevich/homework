@@ -1,4 +1,4 @@
-package by.matusevich.task7;
+package by.matusevich.task07;
 
 public class Cottages {
     public static void main(String[] args) {

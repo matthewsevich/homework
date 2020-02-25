@@ -1,4 +1,4 @@
-package by.matusevich.task1;
+package by.matusevich.task01;
 
 public class HelloWorld {
 

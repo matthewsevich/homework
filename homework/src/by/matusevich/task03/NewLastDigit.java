@@ -1,4 +1,4 @@
-package by.matusevich.task3;
+package by.matusevich.task03;
 
 public class NewLastDigit {
     public static void main(String[] args) {

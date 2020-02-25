@@ -1,4 +1,4 @@
-package by.matusevich.task4;
+package by.matusevich.task04;
 
 public class NewPifagor {
     public static void main(String[] args) {

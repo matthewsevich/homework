@@ -1,4 +1,4 @@
-package by.matusevich.task9;
+package by.matusevich.task09;
 
 class Maximum {
     public static void main(String[] args) {
