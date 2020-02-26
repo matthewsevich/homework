@@ -2,16 +2,17 @@ package by.matusevich.task12;
 
 public class Booch {
     public static void main(String[] args) {
-        int x = (int) (Math.random() * 1000_000_000);
-        int digit = 0;
+        int x = 12345678;
+        int digit;
         int i = 0;
         int y = 0;
+        int count = 0;
         System.out.println(x);
         while (x != 0) {
             y = y * 10 + x % 10;
             x /= 10;
-            System.out.println("first cycle " + x);
-            System.out.println("first cycle " + y);
+            count++;
+
         }
         System.out.println(y);
 
@@ -20,7 +21,7 @@ public class Booch {
             y /= 10;
             System.out.print(digit);
             i++;
-            if (i % 3 == 0)
+            if ((count-i)%3==0)
                 System.out.print(" ");
 
         }
