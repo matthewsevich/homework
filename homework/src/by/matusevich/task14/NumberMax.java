@@ -22,11 +22,13 @@ public class NumberMax {
 
             }
         }
+
         for (int i = 0; i < marks.length; i++) {
-            if (maxMark == marks[i]){
+            if (maxMark == marks[i]) {
                 System.out.print("Number of max mark =");
                 System.out.println(i);
-        }}
+            }
+        }
         System.out.println("Maxmark = " + maxMark);
     }
 }
