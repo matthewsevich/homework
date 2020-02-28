@@ -13,7 +13,7 @@ public class Massiv {
 
         }
         System.out.println();
-            for (int j = 0; j < arr.length/2+1; j++) {
+            for (int j = 0; j < arr.length/2; j++) {
 
                 temp = arr[j];
                 arr[j] = arr[arr.length-1-j];
