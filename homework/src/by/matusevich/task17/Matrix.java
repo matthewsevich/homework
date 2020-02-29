@@ -2,7 +2,7 @@ package by.matusevich.task17;
 
 public class Matrix {
     public static void main(String[] args) {
-        int m[][] = new int[5][5];
+        int m[][] = new int[11][11];
         int k=0;
 
         for (int i = 0; i < m.length; i++) {
@@ -24,15 +24,30 @@ public class Matrix {
             System.out.println();
 
         }        System.out.println();
-        for (int i = 1; i < m.length-1; i++) { //правая сторона
-            for (int j = m.length; j > m.length/2+1; j--) {
-                m[i][j-1] = 3;
-                System.out.print("[" + i + "][" + j + "]=" + m[i][j-1] + " ");
+        for (int i =m.length-2; i >= m.length/2+1; i--) { //левый нижний угол
+            for (int j = 0; j < m.length-i-1; j++) {
+                m[i][j] = 0;
+                System.out.print("[" + i + "][" + j + "]=" + m[i][j] + " ");
             }
             System.out.println();
 
         }        System.out.println();
+        for (int i = m.length-1; i > m.length/2-1; i--) { //правая нижняя сторона
+            for (int j = m.length-1; j > i; j--) {
+                m[i][j] = 0;
+                System.out.print("[" + i + "][" + j + "]=" + m[i][j] + " ");
+            }
+            System.out.println();
 
+        }        System.out.println();
+        for (int i = 0; i <= m.length/2-1; i++) { //правая верхняя сторона
+            for (int j = m.length-1; j > m.length-i-1; j--) {
+                m[i][j] = 0;
+                System.out.print("[" + i + "][" + j + "]=" + m[i][j] + " ");
+            }
+            System.out.println();
+
+        }        System.out.println();
 
         for (int i = 0; i < m.length; i++) {
             for (int j = 0; j < m[i].length; j++) {
