@@ -1,24 +1,47 @@
 package by.matusevich.task13;
 
+import java.util.Scanner;
+
 public class SimpleBreak {
+
     public static void main(String[] args) {
-        int a = (int)(Math.random()*11);
-        System.out.println(a);
-        boolean number=false;
-        if (a<=-2)
-            number= false;
-        if ((a>=-1)&&(a<=3))
-            number= true;
-        if (a%2==0)
-            number= false;
-        for (int i=2; i<a;i++)
-        {
-            if (a%i==0){
-                number= false;
-                break;
-            } else number= true;
+        String yesNo = "Y";
+        while ("Y".equals(yesNo)) {
+
+            int input = readNumber("Введите целое число: ");
+            boolean b = true;
+
+            if (input < 0) {
+                System.out.println(" Ошибка");
+            } else
+                for (int i = 2; i < input; i++) {
+                    if ((input % i) == 0) {
+                        b = false;
+                        break;
+                    } else b = true;
+
+
+                }
+            if (b) System.out.println(input + " простое число");
+            else System.out.println(input + " не простое число");
+            yesNo = readString("Continue yes (Y) no (N)");
+            if (!"Y".equals(yesNo)) {
+
+                System.exit(0);
+            }
         }
-        System.out.println(number);
+    }
+
+    static int readNumber(String msg) {
+        System.out.println(msg);
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+
+    static String readString(String msg) {
+        System.out.println(msg);
+        Scanner scanner = new Scanner(System.in);
+        return scanner.next();
     }
 
 
