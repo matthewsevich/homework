@@ -1,8 +1,11 @@
 package by.matusevich.task17;
 
+import by.matusevich.task02.WeekConverter;
+
 public class NewMatrix {
     public static void main(String[] args) {
-        int N = 7;
+
+        int N = WeekConverter.readNumber("Введите размерность массива");
         int m[][] = new int[N][N];
 
         for (int i = 0; i < N; i++) {
@@ -10,8 +13,7 @@ public class NewMatrix {
             if (i < N / 2) {
                 from = i;
                 to = N - i;
-            }
-            else {
+            } else {
                 from = N - i - 1;
                 to = i + 1;
             }

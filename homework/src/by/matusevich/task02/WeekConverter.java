@@ -10,24 +10,24 @@ public class WeekConverter {
         if (input < 0)
             System.out.println(" ERROR");
 
-            int sec;
-            int m, min;
-            int h, hour;
-            int d, day;
-            int w;
+        int sec;
+        int m, min;
+        int h, hour;
+        int d, day;
+        int w;
 
-            sec = input % 60;
-            m = (input - sec) / 60;
-            min = m % 60;
-            h = (m - min) / 60;
-            hour = h % 24;
-            d = (h - hour) / 24;
-            day = d % 7;
-            w = (d - day) / 7;
-            System.out.println(w + " недель " + day + " дней " + hour + " часов " + min + " минут " + sec + " секунд");
+        sec = input % 60;
+        m = (input - sec) / 60;
+        min = m % 60;
+        h = (m - min) / 60;
+        hour = h % 24;
+        d = (h - hour) / 24;
+        day = d % 7;
+        w = (d - day) / 7;
+        System.out.println(w + " недель " + day + " дней " + hour + " часов " + min + " минут " + sec + " секунд");
     }
 
-    static int readNumber(String msg) {
+    public static int readNumber(String msg) {
         System.out.println(msg);
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();

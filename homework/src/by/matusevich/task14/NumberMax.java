@@ -1,11 +1,13 @@
 package by.matusevich.task14;
 
+import by.matusevich.task02.WeekConverter;
+
 import java.util.Random;
 
 public class NumberMax {
     public static void main(String[] args) {
-
-        int marks[] = new int[20];
+        int input = WeekConverter.readNumber("Введите количество учеников");
+        int marks[] = new int[input];
         Random random = new Random();
         for (int i = 0; i < marks.length; i++) {
             marks[i] = random.nextInt(10);
@@ -25,7 +27,7 @@ public class NumberMax {
 
         for (int i = 0; i < marks.length; i++) {
             if (maxMark == marks[i]) {
-                System.out.print("Number of max mark =");
+                System.out.print("Number of max mark = ");
                 System.out.println(i);
             }
         }

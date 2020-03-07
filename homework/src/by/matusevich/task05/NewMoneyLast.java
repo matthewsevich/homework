@@ -1,9 +1,11 @@
 package by.matusevich.task05;
 
+import by.matusevich.task02.WeekConverter;
+
 public class NewMoneyLast {
     public static void main(String[] args) {
+        int x = WeekConverter.readNumber("Введите количество рублей");
 
-        int x = 3;
         if ((x % 100 > 10) && (x % 100 < 15)) {
             System.out.println(x + " Рублей");
         } else if (x % 10 == 1) {
@@ -12,6 +14,5 @@ public class NewMoneyLast {
             System.out.println(x + " Рубля");
         } else
             System.out.println(x + " Рублей");
-
     }
 }
