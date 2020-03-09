@@ -1,10 +1,10 @@
 package by.matusevich.task20;
 
-import java.util.Scanner;
+import by.matusevich.task01.Utility;
 
 public class LastLetters {
     public static void main(String[] args) {
-        String str = readString("Введите строку для вывода последних букв из каждого слова");
+        String str = Utility.readString("Введите строку для вывода последних букв из каждого слова");
         char symbol;
 
         for (int i = 0; i < str.length(); i++) {
@@ -22,10 +22,6 @@ public class LastLetters {
             System.out.print(str.charAt(str.length() - 1));
     }
 
-    static String readString(String msg) {
-        System.out.println(msg);
-        Scanner scanner = new Scanner(System.in);
-        return scanner.next();
-    }
+
 }
 

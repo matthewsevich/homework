@@ -1,6 +1,6 @@
 package by.matusevich.task13;
 
-import java.util.Scanner;
+import by.matusevich.task01.Utility;
 
 public class SimpleBreak {
 
@@ -8,7 +8,7 @@ public class SimpleBreak {
         String yesNo = "Y";
         while ("Y".equals(yesNo)) {
 
-            int input = readNumber("Введите целое число: ");
+            int input = Utility.readNumber("Введите целое число: ");
             boolean b = true;
 
             if (input < 0) {
@@ -24,25 +24,11 @@ public class SimpleBreak {
                 }
             if (b) System.out.println(input + " простое число");
             else System.out.println(input + " не простое число");
-            yesNo = readString("Continue yes (Y) no (N)");
+            yesNo = Utility.readString("Continue yes (Y) no (N)");
             if (!"Y".equals(yesNo)) {
 
                 System.exit(0);
             }
         }
     }
-
-    static int readNumber(String msg) {
-        System.out.println(msg);
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
-    }
-
-    static String readString(String msg) {
-        System.out.println(msg);
-        Scanner scanner = new Scanner(System.in);
-        return scanner.next();
-    }
-
-
 }

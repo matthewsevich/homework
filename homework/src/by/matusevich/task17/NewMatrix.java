@@ -1,11 +1,11 @@
 package by.matusevich.task17;
 
-import by.matusevich.task02.WeekConverter;
+import by.matusevich.task01.Utility;
 
 public class NewMatrix {
     public static void main(String[] args) {
 
-        int N = WeekConverter.readNumber("Введите размерность массива");
+        int N = Utility.readNumber("Введите размерность массива");
         int m[][] = new int[N][N];
 
         for (int i = 0; i < N; i++) {

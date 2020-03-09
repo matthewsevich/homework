@@ -1,11 +1,11 @@
 package by.matusevich.task10;
 
-import by.matusevich.task02.WeekConverter;
+import by.matusevich.task01.Utility;
 
 class Summation {
     public static void main(String[] args) {
 
-        int x = WeekConverter.readNumber("Введите число для которого, следует посчитать сумму цифр");
+        int x = Utility.readNumber("Введите число для которого, следует посчитать сумму цифр");
         int digit = 0;
 
         if (x < 0) {

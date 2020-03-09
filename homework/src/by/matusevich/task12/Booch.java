@@ -1,10 +1,10 @@
 package by.matusevich.task12;
 
-import by.matusevich.task02.WeekConverter;
+import by.matusevich.task01.Utility;
 
 public class Booch {
     public static void main(String[] args) {
-        int x = WeekConverter.readNumber("Введите число для вывода его в \" бухгалтерском\" формате ");
+        int x = Utility.readNumber("Введите число для вывода его в \" бухгалтерском\" формате ");
         System.out.println("приложенние работает только для чисел >0 & <1000_000_000");
         int digit;
         int i = 0;

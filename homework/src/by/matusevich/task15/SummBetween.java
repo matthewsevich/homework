@@ -1,14 +1,16 @@
 package by.matusevich.task15;
 
-import by.matusevich.task02.WeekConverter;
+import by.matusevich.task01.Utility;
 
 import java.util.Random;
 
 public class SummBetween {
     public static void main(String[] args) {
-        int input = WeekConverter.readNumber("Введите размер массива");
+
+        int input = Utility.readNumber("Введите размер массива");
         int marks[] = new int[input];
         Random random = new Random();
+
         for (int i = 0; i < marks.length; i++) {
             marks[i] = random.nextInt(10);
             marks[i]++; //оценки от 1 до 10

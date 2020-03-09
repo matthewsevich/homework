@@ -1,10 +1,10 @@
 package by.matusevich.task19;
 
-import java.util.Scanner;
+import by.matusevich.task01.Utility;
 
 public class WordCount {
     public static void main(String[] args) {
-        String first = readString("Введите строку для подсчета слов");
+        String first = Utility.readString("Введите строку для подсчета слов");
         String str = first + " ";
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
@@ -17,9 +17,4 @@ public class WordCount {
 
     }
 
-    static String readString(String msg) {
-        System.out.println(msg);
-        Scanner scanner = new Scanner(System.in);
-        return scanner.next();
-    }
 }

@@ -1,13 +1,11 @@
 package by.matusevich.task16;
 
-import by.matusevich.task02.WeekConverter;
-
-import java.util.Random;
+import by.matusevich.task01.Utility;
 
 public class Massiv {
     public static void main(String[] args) {
 
-        int dim = WeekConverter.readNumber("Введите длину одномерного массива");
+        int dim = Utility.readNumber("Введите длину одномерного массива");
         int temp;
         int arr[] = new int[dim];
         for (int i = 0; i < arr.length; i++) {

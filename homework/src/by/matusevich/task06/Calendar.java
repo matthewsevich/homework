@@ -1,12 +1,12 @@
 package by.matusevich.task06;
 
-import by.matusevich.task02.WeekConverter;
+import by.matusevich.task01.Utility;
 
 public class Calendar {
     public static void main(String[] args) {
-        int d = WeekConverter.readNumber("Введите номер дня: ");
-        int m = WeekConverter.readNumber("Введите номер месяца: ");
-        int y = WeekConverter.readNumber("Введите номер года: ");
+        int d = Utility.readNumber("Введите номер дня: ");
+        int m = Utility.readNumber("Введите номер месяца: ");
+        int y = Utility.readNumber("Введите номер года: ");
 
         boolean error = false;
         boolean leapYear = false;

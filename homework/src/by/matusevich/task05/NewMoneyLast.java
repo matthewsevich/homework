@@ -1,10 +1,10 @@
 package by.matusevich.task05;
 
-import by.matusevich.task02.WeekConverter;
+import by.matusevich.task01.Utility;
 
 public class NewMoneyLast {
     public static void main(String[] args) {
-        int x = WeekConverter.readNumber("Введите количество рублей");
+        int x = Utility.readNumber("Введите количество рублей");
 
         if ((x % 100 > 10) && (x % 100 < 15)) {
             System.out.println(x + " Рублей");

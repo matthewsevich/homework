@@ -1,6 +1,6 @@
 package by.matusevich.task07;
 
-import static by.matusevich.task02.WeekConverter.readNumber;
+import by.matusevich.task01.Utility;
 
 public class Cottages {
     public static void main(String[] args) {
@@ -8,12 +8,12 @@ public class Cottages {
         int a, b, c, d;
         int e, f;
 
-        a = readNumber("Введите сторону A: ");
-        c = readNumber("Введите сторону B: ");
-        b = readNumber("Введите сторону C: ");
-        d = readNumber("Введите сторону D: ");
-        e = readNumber("Введите сторону E: ");
-        f = readNumber("Введите сторону F: ");
+        a = Utility.readNumber("Введите сторону A: ");
+        c = Utility.readNumber("Введите сторону B: ");
+        b = Utility.readNumber("Введите сторону C: ");
+        d = Utility.readNumber("Введите сторону D: ");
+        e = Utility.readNumber("Введите сторону E: ");
+        f = Utility.readNumber("Введите сторону F: ");
 
         boolean permission = false;
         if (a * b * c * d * e * f <= 0) {

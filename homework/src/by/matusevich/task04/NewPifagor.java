@@ -1,14 +1,12 @@
 package by.matusevich.task04;
 
-
-import by.matusevich.task02.WeekConverter;
-
+import by.matusevich.task01.Utility;
 
 public class NewPifagor {
     public static void main(String[] args) {
-        int a = WeekConverter.readNumber("Введите первую сторону квадратного отверстия");
-        int b = WeekConverter.readNumber("Введите вторую сторону квадратного отверстия");
-        int r = WeekConverter.readNumber("Введите радиус круглой картонки");
+        int a = Utility.readNumber("Введите первую сторону квадратного отверстия");
+        int b = Utility.readNumber("Введите вторую сторону квадратного отверстия");
+        int r = Utility.readNumber("Введите радиус круглой картонки");
 
         System.out.println("Сторона a: " + a);
         System.out.println("Сторона b: " + b);

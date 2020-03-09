@@ -1,10 +1,10 @@
 package by.matusevich.task17;
 
-import by.matusevich.task02.WeekConverter;
+import by.matusevich.task01.Utility;
 
 public class MatrixBadCode {
     public static void main(String[] args) {
-        int dim = WeekConverter.readNumber("Введите размер двумерного массива");
+        int dim = Utility.readNumber("Введите размер двумерного массива");
         int m[][] = new int[dim][dim];
 
         for (int i = 0; i < m.length; i++) {

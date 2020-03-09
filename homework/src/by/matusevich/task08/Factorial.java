@@ -1,11 +1,11 @@
 package by.matusevich.task08;
 
-import by.matusevich.task02.WeekConverter;
+import by.matusevich.task01.Utility;
 
 class Factorial {
     public static void main(String[] args) {
 
-        int input = WeekConverter.readNumber("Введите число факториал которого нужно вычислить ");
+        int input = Utility.readNumber("Введите число факториал которого нужно вычислить ");
         long fac = 1;
         int i = 1;
 

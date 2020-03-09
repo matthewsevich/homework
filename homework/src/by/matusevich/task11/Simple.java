@@ -1,14 +1,15 @@
 package by.matusevich.task11;
 
+import by.matusevich.task01.Utility;
+
 public class Simple {
     public static void main(String[] args) {
-        int x = (int)(Math.random()*11111);
-        System.out.println(Prime(x));
-        System.out.println(x);
+        int input = Utility.readNumber("Введите число, которое хотите проверить на простоту");
+        System.out.println(Prime(input));
     }
-        static boolean Prime(int a)
-        {
-        if (a<=-2)
+
+    static boolean Prime(int a) {
+        if (a <= -2)
             return false;
         if ((a>=-1)&&(a<=3))
             return true;
