@@ -16,6 +16,6 @@ public class Utility {
     public static String readString(String msg) {
         System.out.println(msg);
         Scanner scanner = new Scanner(System.in);
-        return scanner.next();
+        return scanner.nextLine();
     }
 }
