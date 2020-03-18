@@ -1,9 +1,23 @@
-package by.matusevich.task25;
+package by.matusevich.task24;
 
 public class Refrigerator extends MajorAppliance implements Refrigeratorable {
 
     public Refrigerator() {
 
+    }
+
+    private boolean isOn;
+
+    public void on() {
+        isOn = true;
+    }
+
+    public void off() {
+        isOn = false;
+    }
+
+    public boolean getState() {
+        return isOn;
     }
 
     @Override
