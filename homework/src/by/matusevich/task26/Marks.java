@@ -11,16 +11,20 @@ public class Marks {
         int amountOfPupils = Utility.readNumber("Введите количество учеников в классе");
         ArrayList<Integer> marks = new ArrayList<>();
         Random random = new Random();
-        for (int i = 0; i < amountOfPupils; i++) {
-            marks.add(i, random.nextInt(10));
-        }
-        for (int i : marks) {
-            System.out.println(i);
-        }
-        System.out.println("удаляем неуды");
-        marks.removeIf(integer -> (integer < 4));
-        for (int i : marks) {
-            System.out.println(i);
+        if (amountOfPupils < 0) {
+            System.out.println("Ошибка, отрицательное количество учеников");
+        } else {
+            for (int i = 0; i < amountOfPupils; i++) {
+                marks.add(i, random.nextInt(10));
+            }
+            for (int i : marks) {
+                System.out.println(i);
+            }
+            System.out.println("удаляем неуды");
+            marks.removeIf(integer -> (integer < 4));
+            for (int i : marks) {
+                System.out.println(i);
+            }
         }
     }
 }

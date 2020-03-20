@@ -1,11 +1,9 @@
 package by.matusevich.task22;
 
-import by.matusevich.task01.Utility;
-
 public class TimeInterval {
-    int seconds1;
-    int minutes, m;
-    int hours, h;
+    int seconds;
+    int minutes, minutesWOseconds;
+    int hoursWOminutes, hours;
     int totalseconds;
 
 
@@ -13,6 +11,17 @@ public class TimeInterval {
         totalseconds = hours * 3600 + minutes * 60 + seconds;
         return totalseconds;
 
+    }
+
+    public int fromSeconds(int timeToConvert) {
+        seconds = timeToConvert % 60;
+        minutesWOseconds = (timeToConvert - seconds) / 60;
+        minutes = minutesWOseconds % 60;
+        hoursWOminutes = (minutesWOseconds - minutes) / 60;
+        System.out.println("В " + timeToConvert + " секунд: " + hoursWOminutes + " часов " + minutes + " минут " + seconds + " секунд");
+
+
+        return 0;
     }
 
 
