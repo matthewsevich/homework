@@ -18,12 +18,13 @@ public class Marks {
                 marks.add(i, random.nextInt(10));
             }
             for (int i : marks) {
-                System.out.println(i);
+                System.out.print(i + " ");
             }
-            System.out.println("удаляем неуды");
+            System.out.println();
+            System.out.println("Удаляем неуды");
             marks.removeIf(integer -> (integer < 4));
             for (int i : marks) {
-                System.out.println(i);
+                System.out.print(i + " ");
             }
         }
     }
