@@ -32,10 +32,11 @@ public class MaxMark {
                 int temp = iterator.next();
                 if (maxMark <= temp) {
                     maxMark = temp;
-                    System.out.println(maxMark);
 
                 }
             }
+            System.out.println("макимальная оценка " + maxMark);
+
 
         }
     }
