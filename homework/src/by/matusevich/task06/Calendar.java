@@ -4,62 +4,67 @@ import by.matusevich.task01.Utility;
 
 public class Calendar {
     public static void main(String[] args) {
-        int d = Utility.readNumber("Введите номер дня: ");
-        int m = Utility.readNumber("Введите номер месяца: ");
-        int y = Utility.readNumber("Введите номер года: ");
+        int day = Utility.readNumber("Введите номер дня: ");
+        int month = Utility.readNumber("Введите номер месяца: ");
+        int year = Utility.readNumber("Введите номер года: ");
 
         boolean error = false;
         boolean leapYear = false;
+        boolean longMonth;
 
-        if (y % 4 == 0) {
+        if (year % 4 == 0) {
             leapYear = true;
-            if (y % 100 == 0)
+            if (year % 100 == 0)
                 leapYear = false;
-            if (y % 400 == 0)
+            if (year % 400 == 0)
                 leapYear = true;
         }
+        if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)) {
+            longMonth = true;
+        } else longMonth = false;
 
 
-        if (((d < 0) || (m < 0)) ||
-                ((d > 31) || (m > 12)) ||
-                (((d >= 29) && (m == 2)) && (!leapYear))) {
+        if (((day < 0) || (month < 0)) ||
+                ((day > 31) || (month > 12)) ||
+                (((day >= 29) && (month == 2)) && (!leapYear)) ||
+                ((day >= 30) && (month == 2)) || (!longMonth && (day > 30))) {
             error = true;
             System.out.println("error");
-        } else if ((m == 2) && !error) {
+        } else if ((month == 2) && !error) {
             if (leapYear) {
-                if (d == 29) {
-                    d = 1;
-                    m++;
+                if (day == 29) {
+                    day = 1;
+                    month++;
                 }
-                if (d == 28) {
-                    d++;
+                if (day == 28) {
+                    day++;
                 }
             } else if (!leapYear) {
-                if (d == 28) {
-                    d = 1;
-                    m++;
+                if (day == 28) {
+                    day = 1;
+                    month++;
                 }
             }
-        } else if ((m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) && !error) {
-            if (d == 31) {
-                d = 1;
-                m++;
-                if (m == 13) {
-                    m = 1;
-                    y++;
+        } else if (longMonth && !error) {
+            if (day == 31) {
+                day = 1;
+                month++;
+                if (month == 13) {
+                    month = 1;
+                    year++;
                 }
-            } else d++;
-        } else if (d == 30) {
-            m++;
-            d = 1;
+            } else day++;
+        } else if (day == 30) {
+            month++;
+            day = 1;
         } else
-            d++;
+            day++;
         if (!error) {
 
 
             System.out.println("leap year: " + leapYear);
-            System.out.println("current date: " + d + "." + m + "." + y);
-            System.out.println("tomorrow will be: " + d + "." + m + "." + y);
+            System.out.println("current date: " + day + "." + month + "." + year);
+            System.out.println("tomorrow will be: " + day + "." + month + "." + year);
         }
     }
 }
