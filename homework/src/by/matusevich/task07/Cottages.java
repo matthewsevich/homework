@@ -2,12 +2,31 @@ package by.matusevich.task07;
 
 import by.matusevich.task01.Utility;
 
-public class Cottages {
-    public static void main(String[] args) {
 
+public class Cottages {
+    private static int max(int first, int second) {
+        return first > second ? first : second;
+    }
+
+    // can I fit [x, y] to [to_x, to_y]
+    private static boolean can_fit(int x, int y, int to_x, int to_y) {
+        return (x <= to_x && y <= to_y) || (x <= to_y && y <= to_x);
+    }
+
+    private static boolean have_permission(int a, int b, int c, int d, int e, int f) {
+        if (can_fit(max(a, c), b + d, e, f) ||
+                can_fit(max(a, d), b + c, e, f) ||
+                can_fit(max(b, c), a + d, e, f) ||
+                can_fit(max(b, d), a + c, e, f)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static void main(String args[]) {
         int a, b, c, d;
         int e, f;
-
         a = Utility.readNumber("Введите сторону A: ");
         c = Utility.readNumber("Введите сторону B: ");
         b = Utility.readNumber("Введите сторону C: ");
@@ -15,23 +34,11 @@ public class Cottages {
         e = Utility.readNumber("Введите сторону E: ");
         f = Utility.readNumber("Введите сторону F: ");
 
-        boolean permission = false;
-        if (a * b * c * d * e * f <= 0) {
-            System.out.println("ERROR");
-        } else if (((a + c) <= e) && ((b + d) <= f))
-            permission = true;
-        else if (((a + d) <= e) && ((b + c) <= f))
-            permission = true;
-        else if (((a + c) <= f) && ((b + d) <= e))
-            permission = true;
-        else if (((a + d) <= f) && ((b + c) <= e))
-            permission = true;
-        else if ((a * b + c * d) <= e * f)  // по площади
-            permission = true;
 
-        if (permission)
+        if (have_permission(a, b, c, d, e, f)) {
             System.out.println("можно");
-        else System.out.println("нельзя");
-
+        } else {
+            System.out.println("нельзя");
+        }
     }
 }
