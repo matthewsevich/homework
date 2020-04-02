@@ -1,28 +1,35 @@
 package by.matusevich.task22;
 
 public class TimeInterval {
-    int seconds;
-    int minutes, minutesWOseconds;
-    int hoursWOminutes, hours;
-    int totalseconds;
+    private int seconds;
+    private int minutes;
+    private int hours;
 
-
-    public int toSeconds(int hours, int minutes, int seconds) {
-        totalseconds = hours * 3600 + minutes * 60 + seconds;
-        return totalseconds;
-
+    public int toSeconds() {
+        return this.hours * 3600 + this.minutes * 60 + this.seconds;
     }
 
-    public int fromSeconds(int timeToConvert) {
-        seconds = timeToConvert % 60;
-        minutesWOseconds = (timeToConvert - seconds) / 60;
+    public TimeInterval() {
+        seconds = 0;
+        minutes = 0;
+        hours = 0;
+    }
+
+    public TimeInterval(int hours, int minutes, int seconds) {
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+    }
+
+    public TimeInterval(int timeInSeconds) {
+        this.seconds = timeInSeconds % 60;
+        int minutesWOseconds = (timeInSeconds - this.seconds) / 60;
         minutes = minutesWOseconds % 60;
-        hoursWOminutes = (minutesWOseconds - minutes) / 60;
-        System.out.println("В " + timeToConvert + " секунд: " + hoursWOminutes + " часов " + minutes + " минут " + seconds + " секунд");
-
-
-        return 0;
+        int hoursWOminutes = (minutesWOseconds - minutes) / 60;
+        System.out.println("В " + timeInSeconds + " секунд: " + hoursWOminutes + " часов " + minutes + " минут " + this.seconds + " секунд");
     }
 
-
+    public int compareTo(TimeInterval timeInterval) {
+        return this.toSeconds() - timeInterval.toSeconds();
+    }
 }
