@@ -5,13 +5,12 @@ import by.matusevich.task01.Utility;
 public class Massiv {
     public static void main(String[] args) {
 
-        int dim = Utility.readNumber("Введите длину одномерного массива");
+        int N = Utility.readNumber("Введите длину одномерного массива");
         int temp;
-        int arr[] = new int[dim];
+        int arr[] = new int[N];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
             System.out.print("[" + i + "]" + " " + arr[i] + " ");
-
         }
         System.out.println();
         for (int j = 0; j < arr.length / 2; j++) {

@@ -4,8 +4,8 @@ import by.matusevich.task01.Utility;
 
 public class Booch {
     public static void main(String[] args) {
+        System.out.println("приложение корректно работает только для чисел >0 и меньших на 1 разряд чем макимальное значение интеджера");
         int x = Utility.readNumber("Введите число для вывода его в \" бухгалтерском\" формате ");
-        System.out.println("приложенние работает только для чисел >0 & <1000_000_000");
         int digit;
         int i = 0;
         int y = 1;
