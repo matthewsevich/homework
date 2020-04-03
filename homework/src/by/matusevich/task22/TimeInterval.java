@@ -6,7 +6,9 @@ public class TimeInterval {
     private int hours;
 
     public int toSeconds() {
+
         return this.hours * 3600 + this.minutes * 60 + this.seconds;
+
     }
 
     public TimeInterval() {
@@ -30,6 +32,8 @@ public class TimeInterval {
     }
 
     public int compareTo(TimeInterval timeInterval) {
+
         return this.toSeconds() - timeInterval.toSeconds();
+
     }
 }

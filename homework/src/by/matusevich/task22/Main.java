@@ -1,6 +1,5 @@
 package by.matusevich.task22;
 
-
 public class Main {
 
     static TimeInterval timeDay = new TimeInterval(70);
