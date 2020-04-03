@@ -24,7 +24,7 @@ public class RemoveDuplicates {
                 System.out.print(i + " ");
             }
             System.out.println();//для большой коллекции
-            System.out.println("удаляем дупликаты");
+            System.out.println("удаляем дубликаты");
 
             Set<Integer> set = new LinkedHashSet<>(collection);
             collection.clear();
