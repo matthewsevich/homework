@@ -6,26 +6,26 @@ import java.util.Set;
 
 public class NumberFinder {
 
-    public static void NubmberFinder(String data) throws NumberFormatException {
-        String[] numbers = data.split(" ");
+    public static void Finder(String data) {
+        String[] numbers = data.split(" +");
         int numberSumm = 0;
         ArrayList<Integer> arrayList = new ArrayList<>();
-        try {
-            for (String word : numbers) {
-                System.out.println(word);
-                int number = Integer.parseInt(word);
+        for (String word : numbers) {
+            int number;
+            if (word.matches("\\d+")) {
+                number = Integer.parseInt(word);
                 arrayList.add(number);
                 numberSumm += number;
             }
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
         }
-        System.out.println("сумма: " + numberSumm);
+        System.out.println("cумма= " + numberSumm);
+        System.out.println("Только числа");
+        System.out.println(arrayList);
         Set<Integer> set = new LinkedHashSet<>(arrayList);
         arrayList.clear();
         arrayList.addAll(set);
-        for (int i : arrayList) {
-            System.out.print(i + " ");
-        }
+        System.out.println("минус повторяющиеся числа");
+        System.out.println(set);
+
     }
 }
