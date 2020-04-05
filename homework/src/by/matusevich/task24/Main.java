@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         Refrigerator fridge = new Refrigerator();
-        System.out.println(fridge.size);
+        System.out.println("можно ли поднять одному человеку - " + fridge.canBeCarriedInHands);
         fridge.plugIn();
         fridge.on();
         System.out.println(fridge.getState());
