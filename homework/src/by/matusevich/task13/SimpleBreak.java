@@ -18,7 +18,7 @@ public class SimpleBreak {
                     if ((input % i) == 0) {
                         b = false;
                         break;
-                    } else b = true;
+                    }
 
 
                 }
