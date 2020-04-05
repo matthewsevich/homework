@@ -6,6 +6,11 @@ public class Refrigerator extends MajorAppliance implements Refrigeratorable {
 
     }
 
+    @Override
+    void mainFunction() {
+        super.mainFunction();
+    }
+
     private boolean isOn;
 
     public void on() {
